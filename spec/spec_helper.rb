@@ -132,9 +132,9 @@ RSpec.configure do |c|
 
     # sanitize hieradata
     if defined?(hieradata)
-      set_hieradata(hieradata.gsub(':','_'))
+      set_hieradata(hieradata.tr(':', '_'))
     elsif defined?(class_name)
-      set_hieradata(class_name.gsub(':','_'))
+      set_hieradata(class_name.tr(':', '_'))
     end
   end
 
